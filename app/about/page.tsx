@@ -37,7 +37,7 @@ export default function About() {
     }
 
     return (
-        <div>
+        <div className="flex flex-col items-center gap-6">
             <h1>I am the about page</h1>
 
             <a href="/" style={{ color: "white" }}>Home</a><br></br>
@@ -47,16 +47,19 @@ export default function About() {
             </button>
 
             <p>{serverStuf}</p>
-            {
-                things.map(thing => {
-                    return (
-                        <Card 
-                            name={thing.name}
-                            description={thing.description}
-                        />
-                    )
-                })
-            }
+            <div className="grid grid-cols-2 gap-6 bg-gray-900 px-20 py-10 rounded-md">
+                {
+                    things.map(thing => {
+                        return (
+                            <Card
+                                name={thing.name}
+                                description={thing.description}
+                            />
+                        )
+                    })
+                }
+            </div>
+
         </div>
     )
 }
