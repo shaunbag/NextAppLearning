@@ -1,0 +1,7 @@
+export type Item = {
+    title: string;
+    description: string;
+    image: string;
+    price: number;
+    category: string;
+}
